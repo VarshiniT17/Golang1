@@ -24,12 +24,20 @@ func main() {
 	// 		fmt.Printf("index %d,value %d\n", i, num)
 	// 	}
 
-	m := map[string]string{
-		"fname": "john",
-		"lname": "doe",
-	}
+	// 	m := map[string]string{
+	// 		"fname": "john",
+	// 		"lname": "doe",
+	// 	}
 
-	for key, value := range m {
-		fmt.Println(key, value)
+	// 	for key, value := range m {
+	// 		fmt.Println(key, value)
+	// 	}
+	/// unicode code or asciii values
+	//// starting byte of rune
+	//255-> 1 byte
+	//if greater than 255 then the character takes more bytes so the index next to current index also gets added with the same current index
+	//this itself is called rune
+	for i, c := range "golang" {
+		fmt.Println(i, c)
 	}
 }
