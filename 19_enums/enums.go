@@ -2,22 +2,25 @@ package main
 
 import "fmt"
 
-//enumerated types
-
+// Define a custom type for order status
 type OrderStatus string
 
+// Enum-like constants for OrderStatus
 const (
 	Received  OrderStatus = "received"
-	confirmed             = "confirmed"
-	Prepared              = "prepared"
-	Delivered             = "Delivered"
+	Confirmed OrderStatus = "confirmed"
+	Prepared  OrderStatus = "prepared"
+	Delivered OrderStatus = "delivered"
 )
 
-func changeOrderstatus(status OrderStatus) {
-	fmt.Println("changing order status to ", status)
+// Function to change order status
+func changeOrderStatus(status OrderStatus) {
+	fmt.Println("Changing order status to:", status)
 }
 
 func main() {
-	changeOrderstatus(Delivered)
-
+	// Example usage
+	changeOrderStatus(Received)
+	changeOrderStatus(Prepared)
+	changeOrderStatus(Delivered)
 }
