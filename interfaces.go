@@ -1,14 +1,12 @@
-// package main
+package main
 
-// import "fmt"
+type paymenter interface {
+	pay(amount float32)
+}
 
-// type paymenter interface {
-// 	pay(amount float32)
-// }
-
-// type payment struct {
-// 	gateway paymenter
-// }
+type payment struct {
+	gateway paymenter
+}
 
 // //open close principle violation
 // //open for extention but closed for modification
